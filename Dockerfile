@@ -13,6 +13,9 @@ RUN npm install
 # Copy the rest of the app to the working directory
 COPY . .
 
+# Install curl
+RUN apk update && apk add curl
+
 # Build the app for production
 RUN npm run build
 
